@@ -1,0 +1,258 @@
+// ============================================================================
+//  Español Quest vocabulary  —  .minecraft/config/espanolquest/vocabulary.json
+//  Latin American Spanish.
+//
+//  Each entry maps a Minecraft item ID to its Spanish word:
+//    "word"    : the Spanish noun, without the article (required)
+//    "article" : "el", "la", "los" or "las" — shows the gender (optional)
+//    "accept"  : other words that also count as correct (optional)
+//    "gender"  : "f" or "m", only when the article doesn't show it
+//                (feminine words starting with a stressed "a" take "el": el agua, el hacha)
+//  Saying the word with or without the article ("la manzana" / "manzana" /
+//  "una manzana") always counts.
+//
+//  Keys:
+//    "apple"          = minecraft:apple ("minecraft:" can be left out)
+//    "*_log"          = every item whose ID ends in _log (oak_log, birch_log, ...)
+//    "music_disc_*"   = every item whose ID starts with music_disc_
+//    "create:wrench"  = items from other mods (write the full ID)
+//  Exact IDs win over wildcards; the longest wildcard wins between wildcards.
+//
+//  "colors" are added AFTER the noun on colored items and agree with it:
+//    red_wool -> la lana roja,  red_bed -> la cama roja,  red_carpet -> la alfombra roja
+//    "m" = masculine form, "f" = feminine form (plural is added automatically),
+//    "invariable": true = never changes (naranja, rosa...).
+//
+//  Your edits here are kept. Entries here override the mod's built-in list.
+// ============================================================================
+{
+  "colors": {
+    "white":      { "m": "blanco",   "f": "blanca" },
+    "orange":     { "m": "naranja",  "invariable": true, "accept": ["anaranjado", "anaranjada"] },
+    "magenta":    { "m": "magenta",  "invariable": true },
+    "light_blue": { "m": "celeste",  "accept": ["azul claro"] },
+    "yellow":     { "m": "amarillo", "f": "amarilla" },
+    "lime":       { "m": "verde lima", "invariable": true },
+    "pink":       { "m": "rosa",     "invariable": true, "accept": ["rosado", "rosada"] },
+    "gray":       { "m": "gris" },
+    "light_gray": { "m": "gris claro", "invariable": true },
+    "cyan":       { "m": "cian",     "invariable": true },
+    "purple":     { "m": "morado",   "f": "morada" },
+    "blue":       { "m": "azul" },
+    "brown":      { "m": "café",     "invariable": true, "accept": ["marrón"] },
+    "green":      { "m": "verde" },
+    "red":        { "m": "rojo",     "f": "roja" },
+    "black":      { "m": "negro",    "f": "negra" }
+  },
+
+  "items": {
+    // ---------------- Wood & plants ----------------
+    "*_log":            { "word": "tronco",      "article": "el" },
+    "*_wood":           { "word": "madera",      "article": "la" },
+    "*_planks":         { "word": "tablas",      "article": "las", "accept": ["tabla"] },
+    "*_sapling":        { "word": "brote",       "article": "el", "accept": ["retoño"] },
+    "*_leaves":         { "word": "hojas",       "article": "las", "accept": ["hoja"] },
+    "stick":            { "word": "palo",        "article": "el" },
+    "*_door":           { "word": "puerta",      "article": "la" },
+    "*_trapdoor":       { "word": "trampilla",   "article": "la" },
+    "*_fence":          { "word": "cerca",       "article": "la", "accept": ["valla"] },
+    "*_fence_gate":     { "word": "portón",      "article": "el" },
+    "*_stairs":         { "word": "escaleras",   "article": "las", "accept": ["escalera"] },
+    "*_boat":           { "word": "bote",        "article": "el", "accept": ["barco"] },
+    "*_sign":           { "word": "letrero",     "article": "el", "accept": ["cartel"] },
+    "*_button":         { "word": "botón",       "article": "el" },
+    "bamboo":           { "word": "bambú",       "article": "el" },
+    "cactus":           { "word": "cactus",      "article": "el" },
+    "vine":             { "word": "enredadera", "article": "la" },
+    "lily_pad":         { "word": "nenúfar",     "article": "el" },
+    "moss_block":       { "word": "musgo",       "article": "el" },
+    "dandelion":        { "word": "diente de león", "article": "el" },
+    "poppy":            { "word": "amapola",     "article": "la" },
+    "sunflower":        { "word": "girasol",     "article": "el" },
+    "cornflower":       { "word": "aciano",      "article": "el" },
+    "lily_of_the_valley": { "word": "lirio de los valles", "article": "el" },
+    "rose_bush":        { "word": "rosal",       "article": "el" },
+    "peony":            { "word": "peonía",      "article": "la" },
+    "*_tulip":          { "word": "tulipán",     "article": "el" },
+    "pink_petals":      { "word": "pétalos",     "article": "los" },
+    "brown_mushroom":   { "word": "hongo",       "article": "el", "accept": ["champiñón", "seta"] },
+    "red_mushroom":     { "word": "hongo",       "article": "el", "accept": ["champiñón", "seta"] },
+    "sugar_cane":       { "word": "caña de azúcar", "article": "la" },
+    "kelp":             { "word": "alga",        "article": "el", "gender": "f" },
+    "dried_kelp":       { "word": "alga seca",   "article": "el", "gender": "f" },
+    "*_seeds":          { "word": "semillas",    "article": "las", "accept": ["semilla"] },
+
+    // ---------------- Food ----------------
+    "apple":            { "word": "manzana",     "article": "la" },
+    "golden_apple":     { "word": "manzana dorada", "article": "la", "accept": ["manzana de oro"] },
+    "bread":            { "word": "pan",         "article": "el" },
+    "carrot":           { "word": "zanahoria",   "article": "la" },
+    "potato":           { "word": "papa",        "article": "la" },
+    "baked_potato":     { "word": "papa asada",  "article": "la" },
+    "wheat":            { "word": "trigo",       "article": "el" },
+    "sugar":            { "word": "azúcar",      "article": "el" },
+    "egg":              { "word": "huevo",       "article": "el" },
+    "milk_bucket":      { "word": "leche",       "article": "la" },
+    "beef":             { "word": "carne de res", "article": "la", "accept": ["carne"] },
+    "cooked_beef":      { "word": "bistec",      "article": "el", "accept": ["filete"] },
+    "porkchop":         { "word": "chuleta de cerdo", "article": "la", "accept": ["chuleta"] },
+    "cooked_porkchop":  { "word": "chuleta cocida", "article": "la" },
+    "chicken":          { "word": "pollo",       "article": "el" },
+    "cooked_chicken":   { "word": "pollo asado", "article": "el" },
+    "mutton":           { "word": "cordero",     "article": "el" },
+    "cooked_mutton":    { "word": "cordero asado", "article": "el" },
+    "cod":              { "word": "bacalao",     "article": "el" },
+    "salmon":           { "word": "salmón",      "article": "el" },
+    "tropical_fish":    { "word": "pez tropical", "article": "el" },
+    "pufferfish":       { "word": "pez globo",   "article": "el" },
+    "cookie":           { "word": "galleta",     "article": "la" },
+    "cake":             { "word": "pastel",      "article": "el" },
+    "pumpkin":          { "word": "calabaza",    "article": "la" },
+    "melon":            { "word": "sandía",      "article": "la" },
+    "melon_slice":      { "word": "sandía",      "article": "la", "accept": ["rebanada de sandía"] },
+    "sweet_berries":    { "word": "bayas",       "article": "las", "accept": ["baya"] },
+    "honey_bottle":     { "word": "miel",        "article": "la" },
+    "cocoa_beans":      { "word": "cacao",       "article": "el" },
+    "beetroot":         { "word": "betabel",     "article": "el", "accept": ["remolacha"] },
+    "bowl":             { "word": "tazón",       "article": "el", "accept": ["cuenco"] },
+    "mushroom_stew":    { "word": "sopa",        "article": "la" },
+    "rotten_flesh":     { "word": "carne podrida", "article": "la" },
+
+    // ---------------- Mob drops ----------------
+    "bone":             { "word": "hueso",       "article": "el" },
+    "bone_meal":        { "word": "polvo de hueso", "article": "el" },
+    "string":           { "word": "hilo",        "article": "el" },
+    "spider_eye":       { "word": "ojo de araña", "article": "el" },
+    "feather":          { "word": "pluma",       "article": "la" },
+    "leather":          { "word": "cuero",       "article": "el" },
+    "gunpowder":        { "word": "pólvora",     "article": "la" },
+    "ink_sac":          { "word": "tinta",       "article": "la" },
+    "nautilus_shell":   { "word": "concha",      "article": "la" },
+    "goat_horn":        { "word": "cuerno",      "article": "el" },
+    "slime_ball":       { "word": "bola de baba", "article": "la" },
+    "ender_pearl":      { "word": "perla",       "article": "la" },
+    "*_wool":           { "word": "lana",        "article": "la" },
+
+    // ---------------- Minerals ----------------
+    "coal":             { "word": "carbón",      "article": "el" },
+    "charcoal":         { "word": "carbón vegetal", "article": "el" },
+    "iron_ingot":       { "word": "hierro",      "article": "el" },
+    "gold_ingot":       { "word": "oro",         "article": "el" },
+    "gold_nugget":      { "word": "pepita de oro", "article": "la" },
+    "copper_ingot":     { "word": "cobre",       "article": "el" },
+    "diamond":          { "word": "diamante",    "article": "el" },
+    "emerald":          { "word": "esmeralda",   "article": "la" },
+    "lapis_lazuli":     { "word": "lapislázuli", "article": "el" },
+    "quartz":           { "word": "cuarzo",      "article": "el" },
+    "amethyst_shard":   { "word": "amatista",    "article": "la" },
+    "flint":            { "word": "pedernal",    "article": "el" },
+    "redstone":         { "word": "piedra roja", "article": "la", "accept": ["redstone"] },
+    "*_ore":            { "word": "mineral",     "article": "el" },
+
+    // ---------------- Natural blocks ----------------
+    "dirt":             { "word": "tierra",      "article": "la" },
+    "coarse_dirt":      { "word": "tierra",      "article": "la" },
+    "grass_block":      { "word": "pasto",       "article": "el", "accept": ["césped", "hierba"] },
+    "mud":              { "word": "lodo",        "article": "el", "accept": ["barro"] },
+    "sand":             { "word": "arena",       "article": "la" },
+    "gravel":           { "word": "grava",       "article": "la" },
+    "clay_ball":        { "word": "arcilla",     "article": "la" },
+    "clay":             { "word": "arcilla",     "article": "la" },
+    "stone":            { "word": "piedra",      "article": "la" },
+    "cobblestone":      { "word": "roca",        "article": "la", "accept": ["piedra"] },
+    "granite":          { "word": "granito",     "article": "el" },
+    "diorite":          { "word": "diorita",     "article": "la" },
+    "andesite":         { "word": "andesita",    "article": "la" },
+    "deepslate":        { "word": "pizarra",     "article": "la" },
+    "cobbled_deepslate": { "word": "pizarra",    "article": "la" },
+    "tuff":             { "word": "toba",        "article": "la" },
+    "calcite":          { "word": "calcita",     "article": "la" },
+    "basalt":           { "word": "basalto",     "article": "el" },
+    "obsidian":         { "word": "obsidiana",   "article": "la" },
+    "sandstone":        { "word": "arenisca",    "article": "la" },
+    "ice":              { "word": "hielo",       "article": "el" },
+    "packed_ice":       { "word": "hielo",       "article": "el" },
+    "snowball":         { "word": "bola de nieve", "article": "la" },
+    "snow_block":       { "word": "nieve",       "article": "la" },
+    "snow":             { "word": "nieve",       "article": "la" },
+    "cobweb":           { "word": "telaraña",    "article": "la" },
+    "sponge":           { "word": "esponja",     "article": "la" },
+    "honeycomb":        { "word": "panal",       "article": "el" },
+    "netherrack":       { "word": "piedra infernal", "article": "la" },
+
+    // ---------------- Building & decoration ----------------
+    "glass":            { "word": "vidrio",      "article": "el", "accept": ["cristal"] },
+    "*_glass":          { "word": "vidrio",      "article": "el", "accept": ["cristal"] },
+    "glass_pane":       { "word": "ventana",     "article": "la" },
+    "*_glass_pane":     { "word": "ventana",     "article": "la" },
+    "brick":            { "word": "ladrillo",    "article": "el" },
+    "bricks":           { "word": "ladrillos",   "article": "los" },
+    "*_concrete":       { "word": "concreto",    "article": "el", "accept": ["hormigón"] },
+    "*_terracotta":     { "word": "terracota",   "article": "la" },
+    "*_carpet":         { "word": "alfombra",    "article": "la" },
+    "*_bed":            { "word": "cama",        "article": "la" },
+    "*_banner":         { "word": "bandera",     "article": "la", "accept": ["estandarte"] },
+    "candle":           { "word": "vela",        "article": "la" },
+    "*_candle":         { "word": "vela",        "article": "la" },
+    "*_dye":            { "word": "tinte",       "article": "el" },
+    "torch":            { "word": "antorcha",    "article": "la" },
+    "lantern":          { "word": "linterna",    "article": "la", "accept": ["farol"] },
+    "campfire":         { "word": "fogata",      "article": "la" },
+    "ladder":           { "word": "escalera",    "article": "la" },
+    "painting":         { "word": "cuadro",      "article": "el", "accept": ["pintura"] },
+    "item_frame":       { "word": "marco",       "article": "el" },
+    "flower_pot":       { "word": "maceta",      "article": "la" },
+    "bookshelf":        { "word": "librero",     "article": "el", "accept": ["estante"] },
+    "iron_bars":        { "word": "barrotes",    "article": "los" },
+    "chain":            { "word": "cadena",      "article": "la" },
+    "bell":             { "word": "campana",     "article": "la" },
+
+    // ---------------- Workstations & storage ----------------
+    "crafting_table":   { "word": "mesa de trabajo", "article": "la" },
+    "furnace":          { "word": "horno",       "article": "el" },
+    "chest":            { "word": "cofre",       "article": "el", "accept": ["baúl"] },
+    "barrel":           { "word": "barril",      "article": "el" },
+    "anvil":            { "word": "yunque",      "article": "el" },
+    "cauldron":         { "word": "caldero",     "article": "el" },
+    "hopper":           { "word": "embudo",      "article": "el", "accept": ["tolva"] },
+    "composter":        { "word": "compostera",  "article": "la" },
+
+    // ---------------- Tools, weapons & armor ----------------
+    "*_sword":          { "word": "espada",      "article": "la" },
+    "*_pickaxe":        { "word": "pico",        "article": "el" },
+    "*_axe":            { "word": "hacha",       "article": "el", "gender": "f" },
+    "*_shovel":         { "word": "pala",        "article": "la" },
+    "*_hoe":            { "word": "azada",       "article": "la" },
+    "*_helmet":         { "word": "casco",       "article": "el" },
+    "*_chestplate":     { "word": "pechera",     "article": "la", "accept": ["peto"] },
+    "*_leggings":       { "word": "pantalones",  "article": "los" },
+    "*_boots":          { "word": "botas",       "article": "las", "accept": ["bota"] },
+    "bow":              { "word": "arco",        "article": "el" },
+    "arrow":            { "word": "flecha",      "article": "la" },
+    "shield":           { "word": "escudo",      "article": "el" },
+    "shears":           { "word": "tijeras",     "article": "las" },
+    "fishing_rod":      { "word": "caña de pescar", "article": "la" },
+    "bucket":           { "word": "cubeta",      "article": "la", "accept": ["balde", "cubo"] },
+    "water_bucket":     { "word": "agua",        "article": "el", "gender": "f" },
+    "lava_bucket":      { "word": "lava",        "article": "la" },
+    "spyglass":         { "word": "catalejo",    "article": "el" },
+    "brush":            { "word": "brocha",      "article": "la", "accept": ["cepillo"] },
+    "compass":          { "word": "brújula",     "article": "la" },
+    "clock":            { "word": "reloj",       "article": "el" },
+    "map":              { "word": "mapa",        "article": "el" },
+    "filled_map":       { "word": "mapa",        "article": "el" },
+    "tnt":              { "word": "dinamita",    "article": "la" },
+    "flint_and_steel":  { "word": "encendedor",  "article": "el", "accept": ["mechero"] },
+
+    // ---------------- Misc ----------------
+    "paper":            { "word": "papel",       "article": "el" },
+    "book":             { "word": "libro",       "article": "el" },
+    "glass_bottle":     { "word": "botella",     "article": "la" },
+    "potion":           { "word": "poción",      "article": "la" },
+    "rail":             { "word": "riel",        "article": "el", "accept": ["vía"] },
+    "minecart":         { "word": "vagoneta",    "article": "la" },
+    "saddle":           { "word": "silla de montar", "article": "la", "accept": ["montura"] },
+    "name_tag":         { "word": "etiqueta",    "article": "la" },
+    "music_disc_*":     { "word": "disco",       "article": "el" }
+  }
+}

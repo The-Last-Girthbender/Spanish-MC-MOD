@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "espanolquest",
+  "version": "${version}",
+  "name": "Español Quest",
+  "description": "Learn Spanish while you play. Every few pickups of an item, you have a limited time to say its Spanish name into your microphone, or the new items vanish.",
+  "authors": ["You"],
+  "license": "MIT",
+  "icon": "assets/espanolquest/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.espanolquest.EspanolQuest"],
+    "client": ["com.espanolquest.client.EspanolQuestClient"],
+    "modmenu": ["com.espanolquest.client.ModMenuIntegration"]
+  },
+  "suggests": {
+    "modmenu": "*"
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
